@@ -27,9 +27,6 @@ const ProductSchema=new Schema({
     created_at:{type:Date, default:null},
     updated_at:{type:Date, default:null},
     deleted_at:{type:Date, default:null}
-
-
-
 })
 
 module.exports=mongoose.model("Product", ProductSchema);

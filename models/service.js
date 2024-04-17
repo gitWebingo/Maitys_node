@@ -19,7 +19,7 @@ const ServiceSchema=new Schema({
     payment_status:{type:String, enum:['Pending','Success','Failed'], default:'Pending'},  
     package_id:{type:String, default:null},
     serviceData:{type:String, default:null},
-    service_date:{ type: Date, required:true },
+    service_date:{ type: Date, default:null },
     service_status:{type: String, enum:['Pending', 'In Progress','Completed'], default:'Pending'},
     amountSettled:{type:String, enum:['No','Yes'], default:'No'},
     sattlementDate:{type:Date, default:null},

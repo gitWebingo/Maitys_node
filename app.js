@@ -1,5 +1,6 @@
 const express = require("express");
 const connectDB = require("./db/connect");
+const userRouter=require('./routes/userRouter')
 const app = express();
 
 const port = process.env.PORT || 5000;
@@ -13,6 +14,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Webingo");
 });
+
+app.use('/api/v1/user',userRouter)
 
 const start = async () => {
   try {
