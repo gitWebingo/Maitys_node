@@ -12,7 +12,7 @@ const createService=async(req,res)=>{
         }
         const service=new Service(req.body);
         await service.save();
-        return res.json({success:true, service:service})
+        return res.json({success:true})
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: "Internal server error" });

@@ -12,7 +12,7 @@ const createProduct=async(req,res)=>{
         }
         const product=new Product(req.body);
         await product.save();
-        return res.json({success:true, product:product})
+        return res.json({success:true})
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: "Internal server error" });
