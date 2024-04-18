@@ -20,6 +20,7 @@ const ServiceSchema=new Schema({
     package_id:{type:String, default:null},
     serviceData:{type:String, default:null},
     service_date:{ type: Date, default:null },
+    addedBy:{type:Number,default:null},
     service_status:{type: String, enum:['Pending', 'In Progress','Completed'], default:'Pending'},
     amountSettled:{type:String, enum:['No','Yes'], default:'No'},
     sattlementDate:{type:Date, default:null},

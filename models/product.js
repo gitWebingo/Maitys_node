@@ -21,6 +21,7 @@ const ProductSchema=new Schema({
     delivery_status:{type:String, enum:['Pending','Processing','Cancelled','Delevered'],default:'Pending'},
     cancelled_by:{type:String, enum:['Member','Vender',null],default:null},
     cancelled_reason:{type:String, default:null},
+    addedBy:{type:Number,default:null},
     amountSettled:{type:String, enum:['No','Yes'], default:'No'},
     sattlementDate:{type:Date, default:null},
     productsData:{type:String, default:null},
